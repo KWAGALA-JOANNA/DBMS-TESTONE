@@ -25,12 +25,7 @@ SELECT DISTINCT gender, D_O_B, Last_Name, First_Name FROM students
 WHERE course = 'DCS';
 
 --Produce total number of students per course
-SELECT SUM(Reg_no) FROM students
-WHERE course = 'DCS' ;
-SELECT SUM(Reg_no) FROM students
-WHERE course = 'CIT' ;
-SELECT SUM(Reg_no) FROM students
-WHERE course = 'DBIT' ;
+SELECT Course, COUNT(Reg_no) AS Total_Students FROM students GROUP BY Course;
 
 --List of all male students born between 1980 and 1989
 -- Modifying the last name
